@@ -19,17 +19,30 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background gradient circles */}
+    <>
+      {/* Gray rounded box container - before header */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100%] max-w-7xl min-h-[108vh] rounded-b-3xl bg-background:radial-gradient(125% 125% at 50% 100%,transparent 0%,#red 75%); z-[1]" />
+    
+      <section className="relative min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover opacity-30"
+          >
+            <source src="/video/bg.mp4" type="video/mp4" />
+          </video>
+        </div>
 
-
-
-      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
         {/* Badge */}
         <div className="flex justify-center mb-8">
           <Link
             href="https://github.com/iamsrikanthnani/pluely"
-            className="group inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect hover:bg-white/10 transition-all"
+            className="group inline-flex items-center gap-2 px-4 py-2 rounded-full  hover:bg-white/10 transition-all"
           >
             <span className="text-yellow-400">✨</span>
             <span className="text-sm text-gray-300">Open Source Alternative to Cluely</span>
@@ -93,7 +106,8 @@ export default function Hero() {
 
 
 
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   )
 }

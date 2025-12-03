@@ -20,6 +20,8 @@ import CompleteInvisibility from "@/components/complete-invisibility"
 import CompleteInvisibilityTwo from "@/components/complete-visibility-two"
 import CompleteInvisibilityThree from "@/components/completevisibility-three"
 import CompleteInvisibilityFour from "@/components/complete-visibility-four"
+import FaqVideos from "@/components/faq-videos"
+import FaqTwo from "@/components/faq-two"
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(true)
@@ -55,14 +57,14 @@ export default function Home() {
          <CompleteInvisibilityThree />
           <CompleteInvisibilityFour />
       <WhyPluely />
-      <Invisibility />
-      <KeyboardShortcuts />
-      <ScreenshotCapture />
-      <AlwaysReady />
+      {/* <Invisibility /> */}
+      <FaqVideos />
+      <FaqTwo />
+      {/* <AlwaysReady />
       <AIControl />
       <VoiceAudio />
       <ReadyToGo />
-      <FAQ />
+      <FAQ /> */}
       <Downloads />
       <Footer />
     </div>
