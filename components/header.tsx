@@ -31,7 +31,7 @@ export default function Header() {
    
     <header
       className={`fixed top-0 left-0 flex justify-evenly items-center my-4 right-0 mx-auto z-50 transition-all duration-300  ${
-        isScrolled ? "h-20 w-[70%]  border rounded-xl border-gray-100/10 backdrop-blur-3xl flex justify-center  my-4": "h-20 w-full border-none bg-transparent"}`}
+        isScrolled ? "h-20 w-[70%] border rounded-xl border-gray-200/50 bg-white/70 backdrop-blur-xl shadow-lg flex justify-center my-4": "h-20 w-full border-none bg-transparent"}`}
     >
        {/* <div className="absolute inset-0 z-0 top-0 flex items-center justify-center pointer-events-none">
         <div className="w-[100%] max-w-7xl h-[80%] rounded-3xl border border-gray-600/30 bg-[#1a1a1a]/70 backdrop-blur-sm" />
@@ -42,7 +42,7 @@ export default function Header() {
             <div className="w-8 h-8 bg-yellow-400 rounded-lg flex justify-center items-center  font-bold text-black group-hover:scale-110 transition-transform">
               P
             </div>
-            <span className="font-bold text-lg hidden sm:inline">Pluely</span>
+            <span className="font-bold text-lg hidden sm:inline text-gray-900">Pluely</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,7 +51,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-100/50 rounded-lg transition-colors"
               >
                 {item.name}
               </Link>

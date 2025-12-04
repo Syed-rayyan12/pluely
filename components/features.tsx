@@ -71,7 +71,7 @@ export default function Features() {
     <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 data-animate">Why Pluely?</h2>
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16 data-animate">
+        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-16 data-animate">
           Pluely redefines what an AI assistant can be. Built from the ground up with privacy, performance, and
           discretion in mind.
         </p>
@@ -80,7 +80,7 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-black border flex items-center gap-4 border-gray-400/40  rounded-xl px-4 py-3 hover:border-gray-400/80 transition-all duration-300 cursor-pointer data-animate"
+              className="bg-white/60 backdrop-blur-sm border flex items-center gap-4 border-gray-200/50 shadow-md rounded-xl px-4 py-3 hover:border-gray-300 hover:shadow-lg transition-all duration-300 cursor-pointer data-animate"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
 
@@ -88,7 +88,7 @@ export default function Features() {
 
               <div className="">
                 <h3 className="text-md font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm">{feature.description}</p>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
               </div>
             </div>
           ))}

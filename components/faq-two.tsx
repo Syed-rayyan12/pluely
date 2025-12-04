@@ -40,13 +40,13 @@ const FaqTwo = () => {
                 {/* Ready to Go Invisible Section */}
                 <div className='text-center mb-20'>
                     <h2 className='text-5xl font-medium mb-4'>Ready to Go Invisible?</h2>
-                    <p className='max-w-3xl text-md mx-auto leading-8 text-gray-400'>
+                    <p className='max-w-3xl text-md mx-auto leading-8 text-gray-600'>
                         Experience AI assistance that operates with complete stealth. Built with Tauri and Rust for blazing-fast performance, absolute privacy, and professional-grade discretion. Your invisible AI companion for meetings, interviews, and presentations.
                     </p>
 
                     <div className='flex gap-4 justify-center mt-6'>
-                        <Button className='bg-white text-black py-5 px-8 hover:bg-gray-200'>Get Started</Button>
-                        <Button className='bg-transparent text-white border border-gray-400/40 rounded-lg py-5 px-8 hover:bg-white/10'>Learn More</Button>
+                        <Button className='bg-gray-900 text-white py-5 px-8 hover:bg-gray-800 shadow-lg'>Get Started</Button>
+                        <Button className='bg-white/60 backdrop-blur-sm text-gray-900 border border-gray-200/50 rounded-lg py-5 px-8 hover:bg-white/80 shadow-md'>Learn More</Button>
                     </div>
                 </div>
 
@@ -55,7 +55,7 @@ const FaqTwo = () => {
                     {/* Left Side - Heading */}
                     <div className="space-y-4">
                         <h2 className="text-4xl font-bold">Frequently Asked Questions</h2>
-                        <p className="text-gray-400">
+                        <p className="text-gray-600">
                             Can't find what you're looking for? Contact support for further assistance.
                         </p>
                      
@@ -66,16 +66,16 @@ const FaqTwo = () => {
                         {faqs.map((faq, index) => (
                             <div
                                 key={index}
-                                className="bg-transparent border border-gray-600/30 rounded-xl overflow-hidden"
+                                className="bg-white/60 backdrop-blur-sm border border-gray-200/50 shadow-md rounded-xl overflow-hidden"
                             >
                                 <button
                                     onClick={() => toggleFaq(index)}
-                                    className="w-full flex items-center gap-4 p-5 text-left hover:bg-white/5 transition-colors"
+                                    className="w-full flex items-center gap-4 p-5 text-left hover:bg-gray-100/50 transition-colors"
                                 >
-                                    <HelpCircle className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                                    <HelpCircle className="w-5 h-5 text-gray-500 flex-shrink-0" />
                                     <span className="flex-1 text-lg font-medium">{faq.question}</span>
                                     <ChevronDown
-                                        className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${
+                                        className={`w-5 h-5 text-gray-500 transition-transform duration-300 ${
                                             openIndex === index ? "rotate-180" : ""
                                         }`}
                                     />
@@ -85,7 +85,7 @@ const FaqTwo = () => {
                                         openIndex === index ? "max-h-48 pb-5 px-5 pl-14" : "max-h-0"
                                     }`}
                                 >
-                                    <p className="text-gray-400">{faq.answer}</p>
+                                    <p className="text-gray-600">{faq.answer}</p>
                                 </div>
                             </div>
                         ))}

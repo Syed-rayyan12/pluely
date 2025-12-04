@@ -20,8 +20,8 @@ export default function Hero() {
 
   return (
     <>
-      {/* Gray rounded box container - before header */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100%] max-w-7xl min-h-[108vh] rounded-b-3xl bg-background:radial-gradient(125% 125% at 50% 100%,transparent 0%,#red 75%); z-[1]" />
+      {/* Light rounded box container - before header */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100%] max-w-7xl min-h-[108vh] rounded-b-3xl bg-white/40 backdrop-blur-sm border border-gray-200/50 shadow-xl z-[1]" />
     
       <section className="relative min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Video */}
@@ -42,11 +42,11 @@ export default function Hero() {
         <div className="flex justify-center mb-8">
           <Link
             href="https://github.com/iamsrikanthnani/pluely"
-            className="group inline-flex items-center gap-2 px-4 py-2 rounded-full  hover:bg-white/10 transition-all"
+            className="group inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm border border-gray-200/50 shadow-sm hover:bg-white/80 transition-all"
           >
             <span className="text-yellow-400">✨</span>
-            <span className="text-sm text-gray-300">Open Source Alternative to Cluely</span>
-            <ArrowRight size={16} className="text-gray-400 group-hover:translate-x-1 transition-transform" />
+            <span className="text-sm text-gray-700">Open Source Alternative to Cluely</span>
+            <ArrowRight size={16} className="text-gray-500 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
@@ -59,7 +59,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto animate-fade-in-up"
+            className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in-up"
             style={{ animationDelay: "0.1s" }}
           >
             Pluely operates with complete stealth during meetings, interviews, and presentations. Undetectable in video
@@ -74,28 +74,28 @@ export default function Hero() {
           >
             <Link
               href="#downloads"
-              className="px-6 py-3 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition-colors flex items-center gap-2"
+              className="px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center gap-2 shadow-lg"
             >
               Download Now
               <ArrowRight size={18} />
             </Link>
             <Link
               href="https://github.com/iamsrikanthnani/pluely"
-              className="px-6 py-3 border border-white/20 text-white rounded-lg font-semibold hover:border-white/40 hover:bg-white/5 transition-all flex items-center gap-2"
+              className="px-6 py-3 border border-gray-300 text-gray-900 rounded-lg font-semibold hover:border-gray-400 hover:bg-white/50 backdrop-blur-sm transition-all flex items-center gap-2"
             >
               <Star size={18} className="text-yellow-400" />
-              <span>1.2K stars on GitHub</span>
+              <span className="text-gray-900">1.2K stars on GitHub</span>
             </Link>
           </div>
         </div>
 
         {/* Hero Image/Demo */}
 
-        <div className="rounded-xl relative bg-black border  border-gray-600/20  p-4 max-w-6xl   mx-auto">
+        <div className="rounded-xl relative bg-white/60 backdrop-blur-sm border border-gray-200/50 shadow-xl p-4 max-w-6xl mx-auto">
           <div
-            className="absolute bottom-0 left-0 w-full h-1/2  rounded-b-2xl"
+            className="absolute bottom-0 left-0 w-full h-1/2 rounded-b-2xl"
             style={{
-              background: 'linear-gradient(to top, black, rgba(0,0,0,0))',
+              background: 'linear-gradient(to top, rgba(255,255,255,0.9), rgba(255,255,255,0))',
             }}
           />
           <img src="/app.png" alt="" className="rounded-xl" />

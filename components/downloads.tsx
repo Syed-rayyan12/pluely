@@ -50,11 +50,11 @@ const platformsThree = [
 
 export default function Downloads() {
   return (
-    <section id="downloads" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#111111] m-6 rounded-3xl">
+    <section id="downloads" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/60 backdrop-blur-sm border border-gray-200/50 shadow-xl m-6 rounded-3xl">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12 data-animate">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Explore Pluely</h2>
-          <p className="text-gray-400">
+          <p className="text-gray-600">
             Download for your platform, browse release history, or explore our development journey
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function Downloads() {
           {platforms.map((platform, index) => (
             <div
               key={index}
-              className="glass-effect rounded-xl p-8 border border-white/10 hover:border-yellow-400/30 transition-all group cursor-pointer data-animate"
+              className="bg-white/70 backdrop-blur-sm rounded-xl p-8 border border-gray-200/50 shadow-md hover:border-yellow-400/50 hover:shadow-lg transition-all group cursor-pointer data-animate"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center gap-4 justify-between mb-6">
@@ -77,12 +77,12 @@ export default function Downloads() {
                   <div className="text-6xl">{platform.icon}</div>
                   <div className="flex flex-col">
                     <h3 className="text-lg font-semibold ">{platform.name}</h3>
-                    <p className="text-gray-400 text-sm ">{platform.desc}</p>
+                    <p className="text-gray-600 text-sm ">{platform.desc}</p>
                   </div>
                 </div>
                 <ChevronRight />
               </div>
-              <button className="flex items-center justify-center gap-2 w-full px-4 cursor-pointer  hover:bg-gray-600/50 py-1 bg-[#121212]/10 text-white rounded-3xl font-medium  transition-colors border border-gray-600/20">
+              <button className="flex items-center justify-center gap-2 w-full px-4 cursor-pointer hover:bg-gray-100 py-1 bg-white/80 text-gray-900 rounded-3xl font-medium transition-colors border border-gray-200/50 shadow-sm">
                 <Download size={18} />
                 Download for macOS
               </button>
@@ -98,7 +98,7 @@ export default function Downloads() {
             <h3 className="text-xl font-semibold ">Recent Releases
             </h3>
           </div>
-          <Button className="border border-gray-600/20 rounded-xl text-white py-4 bg-transparent hover:bg-white/5 bg-transparent flex items-center gap-2 cursor-pointer">
+          <Button className="border border-gray-200/50 rounded-xl text-gray-900 py-4 bg-white/60 backdrop-blur-sm hover:bg-white/80 shadow-md flex items-center gap-2 cursor-pointer">
             View Release History
             <DownloadCloud />
           </Button>
@@ -108,7 +108,7 @@ export default function Downloads() {
           {platformsTwo.map((platform, index) => (
             <div
               key={index}
-              className="glass-effect rounded-xl p-8 border border-white/10 hover:border-yellow-400/30 transition-all group cursor-pointer data-animate"
+              className="bg-white/70 backdrop-blur-sm rounded-xl p-8 border border-gray-200/50 shadow-md hover:border-yellow-400/50 hover:shadow-lg transition-all group cursor-pointer data-animate"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center gap-4 justify-between mb-6">
@@ -116,12 +116,12 @@ export default function Downloads() {
                   <div className="text-5xl mb-4">{platform.icon}</div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{platform.name}</h3>
-                    <p className="text-gray-400 text-sm mb-4">{platform.desc}</p>
+                    <p className="text-gray-600 text-sm mb-4">{platform.desc}</p>
                   </div>
                 </div>
                 <ChevronRight />
               </div>
-              <button className="flex items-center justify-center gap-2 w-full px-4 cursor-pointer  hover:bg-gray-600/50 py-1 bg-[#121212]/10 text-white rounded-3xl font-medium  transition-colors border border-gray-600/20">
+              <button className="flex items-center justify-center gap-2 w-full px-4 cursor-pointer hover:bg-gray-100 py-1 bg-white/80 text-gray-900 rounded-3xl font-medium transition-colors border border-gray-200/50 shadow-sm">
                 <Download size={18} />
                 View Release
               </button>
@@ -135,7 +135,7 @@ export default function Downloads() {
             <h3 className="text-xl font-semibold ">Recent Releases
             </h3>
           </div>
-          <Button className="border border-gray-600/20 rounded-xl text-white py-4 bg-transparent hover:bg-white/5 bg-transparent flex items-center gap-2 cursor-pointer">
+          <Button className="border border-gray-200/50 rounded-xl text-gray-900 py-4 bg-white/60 backdrop-blur-sm hover:bg-white/80 shadow-md flex items-center gap-2 cursor-pointer">
             View Release History
             <DownloadCloud />
           </Button>
@@ -145,7 +145,7 @@ export default function Downloads() {
           {platformsTwo.map((platform, index) => (
             <div
               key={index}
-              className="glass-effect rounded-xl p-8 border border-white/10 hover:border-yellow-400/30 transition-all group cursor-pointer data-animate"
+              className="bg-white/70 backdrop-blur-sm rounded-xl p-8 border border-gray-200/50 shadow-md hover:border-yellow-400/50 hover:shadow-lg transition-all group cursor-pointer data-animate"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center gap-4 justify-between mb-6">
@@ -153,12 +153,12 @@ export default function Downloads() {
                   <div className="text-5xl mb-4">{platform.icon}</div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{platform.name}</h3>
-                    <p className="text-gray-400 text-sm mb-4">{platform.desc}</p>
+                    <p className="text-gray-600 text-sm mb-4">{platform.desc}</p>
                   </div>
                 </div>
                 <ChevronRight />
               </div>
-              <button className="flex items-center justify-center gap-2 w-full px-4 cursor-pointer  hover:bg-gray-600/50 py-1 bg-[#121212]/10 text-white rounded-3xl font-medium  transition-colors border border-gray-600/20">
+              <button className="flex items-center justify-center gap-2 w-full px-4 cursor-pointer hover:bg-gray-100 py-1 bg-white/80 text-gray-900 rounded-3xl font-medium transition-colors border border-gray-200/50 shadow-sm">
                 <Download size={18} />
                 View Release
               </button>
@@ -172,7 +172,7 @@ export default function Downloads() {
           {platformsThree.map((platform, index) => (
             <div
               key={index}
-              className="glass-effect rounded-xl p-8 border border-white/10 hover:border-yellow-400/30 transition-all group cursor-pointer data-animate"
+              className="bg-white/70 backdrop-blur-sm rounded-xl p-8 border border-gray-200/50 shadow-md hover:border-yellow-400/50 hover:shadow-lg transition-all group cursor-pointer data-animate"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
 
@@ -180,15 +180,15 @@ export default function Downloads() {
 
               <div className="text-center mb-6">
                 <h3 className="text-xl font-semibold mb-2">{platform.name}</h3>
-                <p className="text-muted-foreground max-w-md mx-auto">{platform.desc}</p>
+                <p className="text-gray-600 max-w-md mx-auto">{platform.desc}</p>
               </div>
 
               <div className="flex  center gap-4 max-w-md mx-auto">
-                <button className="flex items-center justify-center gap-2 w-full px-4 cursor-pointer  hover:bg-gray-600/50 py-1 bg-[#121212]/10 text-white rounded-3xl font-medium  transition-colors border border-gray-600/20">
+                <button className="flex items-center justify-center gap-2 w-full px-4 cursor-pointer hover:bg-gray-100 py-1 bg-white/80 text-gray-900 rounded-3xl font-medium transition-colors border border-gray-200/50 shadow-sm">
                   <Download size={18} />
                   View Release
                 </button>
-                <button className="flex items-center justify-center gap-2 w-full px-4 cursor-pointer  hover:bg-gray-600/50 py-1 bg-[#121212]/10 text-white rounded-3xl font-medium  transition-colors border border-gray-600/20">
+                <button className="flex items-center justify-center gap-2 w-full px-4 cursor-pointer hover:bg-gray-100 py-1 bg-white/80 text-gray-900 rounded-3xl font-medium transition-colors border border-gray-200/50 shadow-sm">
                   <Download size={18} />
                   View Release
                 </button>

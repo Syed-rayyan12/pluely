@@ -32,7 +32,7 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`font-sans antialiased bg-black text-white`}>
+      <body className={`font-sans antialiased bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900`}>
         {children}
         <Analytics />
       </body>

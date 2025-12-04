@@ -32,7 +32,7 @@ export default function FaqVideos() {
                     <br />
                     <span className="">Built for Privacy</span>
                 </h2>
-                <p className="max-w-2xl text-center">Connect to any AI provider using simple curl commands. OpenAI, Anthropic, Google, xAI, Mistral, Cohere, Perplexity, Groq, Ollama, or your own custom endpoint. Switch providers anytime without losing your chat history or configuration. Full streaming and non-streaming support with complete flexibility.</p>
+                <p className="max-w-2xl text-center text-gray-600">Connect to any AI provider using simple curl commands. OpenAI, Anthropic, Google, xAI, Mistral, Cohere, Perplexity, Groq, Ollama, or your own custom endpoint. Switch providers anytime without losing your chat history or configuration. Full streaming and non-streaming support with complete flexibility.</p>
             </div>
             <div className="max-w-5xl mx-auto">
 
@@ -44,7 +44,7 @@ export default function FaqVideos() {
                             {features.map((feature, index) => (
                                 <div
                                     key={index}
-                                    className="bg-black border-b border-gray-400/20  overflow-hidden transition-all duration-300"
+                                    className="bg-white/60 backdrop-blur-sm border-b border-gray-200/50 overflow-hidden transition-all duration-300"
                                 >
                                     <button
                                         onClick={() => setActiveIndex(index)}
@@ -60,7 +60,7 @@ export default function FaqVideos() {
                                         className={`overflow-hidden transition-all duration-300 ${activeIndex === index ? "max-h-48 pb-6 px-6" : "max-h-0"
                                             }`}
                                     >
-                                        <p className="text-gray-400">{feature.description}</p>
+                                        <p className="text-gray-600">{feature.description}</p>
 
                                     </div>
                                 </div>
@@ -68,24 +68,24 @@ export default function FaqVideos() {
                         </div>
 
                         <div className="mt-4 px-6">
-                            <h2 className="font-medium text-xl text-white">Custom STT Provider with cURL
+                            <h2 className="font-medium text-xl text-gray-900">Custom STT Provider with cURL
                             </h2>
-                            <div className=" border p-4 rounded-xl border-gray-600/20 my-4 hover:bg-[#262626]" >
-                                <p className="text-muted-foreground text-sm">Any Speech API: Integrate any STT provider using curl commands with complete flexibility</p>
+                            <div className="border border-gray-200/50 bg-white/60 backdrop-blur-sm shadow-md p-4 rounded-xl my-4 hover:bg-white/80 hover:shadow-lg transition-all" >
+                                <p className="text-gray-600 text-sm">Any Speech API: Integrate any STT provider using curl commands with complete flexibility</p>
                             </div>
-                            <div className=" border p-4 rounded-xl border-gray-600/20 my-4 hover:bg-[#262626]" >
-                                <p className="text-muted-foreground text-sm">Dynamic Variables: AUDIO, API_KEY, LANGUAGE and custom variables for your workflow</p>
+                            <div className="border border-gray-200/50 bg-white/60 backdrop-blur-sm shadow-md p-4 rounded-xl my-4 hover:bg-white/80 hover:shadow-lg transition-all" >
+                                <p className="text-gray-600 text-sm">Dynamic Variables: AUDIO, API_KEY, LANGUAGE and custom variables for your workflow</p>
                             </div>
-                            <div className=" border p-4 rounded-xl border-gray-600/20 my-4 hover:bg-[#262626]" >
-                                <p className="text-muted-foreground text-sm">Instant Testing: Verify your custom STT configuration with real-time testing</p>
+                            <div className="border border-gray-200/50 bg-white/60 backdrop-blur-sm shadow-md p-4 rounded-xl my-4 hover:bg-white/80 hover:shadow-lg transition-all" >
+                                <p className="text-gray-600 text-sm">Instant Testing: Verify your custom STT configuration with real-time testing</p>
                             </div>
 
                         </div>
                     </div>
 
                     {/* Video Box */}
-                    <div className="relative rounded-xl bg-black border  border-gray-600/20  p-2 w-full h-full ">
-                        <div className="relative rounded-xl overflow-hidden border border-gray-600/20 h-full bg-black">
+                    <div className="relative rounded-xl bg-white/60 backdrop-blur-sm border border-gray-200/50 shadow-xl p-2 w-full h-full">
+                        <div className="relative rounded-xl overflow-hidden border border-gray-200/50 h-full bg-white/40">
                             <video
                                 key={activeIndex}
                                 loop
@@ -103,29 +103,29 @@ export default function FaqVideos() {
 
                 </div>
                 <div className="text-center mt-30 w-full">
-                    <h2 className="text-white font-medium text-2xl mb-3">Pre-Configured Speech-to-Text Providers
+                    <h2 className="text-gray-900 font-medium text-2xl mb-3">Pre-Configured Speech-to-Text Providers
                     </h2>
                     <div className="grid-cols-3 grid-cols-2 grid  items-center  mx-auto  gap-4 w-full mt-4">
-                        <div className="border border-gray-600/40 text-gray-600 p-4 rounded-xl  hover:bg-[#262626]">
-                            <h2 className="text-muted-foreground text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
+                        <div className="border border-gray-200/50 bg-white/60 backdrop-blur-sm shadow-md text-gray-600 p-4 rounded-xl hover:bg-white/80 hover:shadow-lg transition-all">
+                            <h2 className="text-gray-600 text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
                         </div>
-                        <div className="border border-gray-600/40 text-gray-600 p-4 rounded-xl  hover:bg-[#262626]">
-                            <h2 className="text-muted-foreground text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
+                        <div className="border border-gray-200/50 bg-white/60 backdrop-blur-sm shadow-md text-gray-600 p-4 rounded-xl hover:bg-white/80 hover:shadow-lg transition-all">
+                            <h2 className="text-gray-600 text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
                         </div>
-                        <div className="border border-gray-600/40 text-gray-600 p-4 rounded-xl  hover:bg-[#262626]">
-                            <h2 className="text-muted-foreground text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
+                        <div className="border border-gray-200/50 bg-white/60 backdrop-blur-sm shadow-md text-gray-600 p-4 rounded-xl hover:bg-white/80 hover:shadow-lg transition-all">
+                            <h2 className="text-gray-600 text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
                         </div>
-                        <div className="border border-gray-600/40 text-gray-600 p-4 rounded-xl  hover:bg-[#262626]">
-                            <h2 className="text-muted-foreground text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
+                        <div className="border border-gray-200/50 bg-white/60 backdrop-blur-sm shadow-md text-gray-600 p-4 rounded-xl hover:bg-white/80 hover:shadow-lg transition-all">
+                            <h2 className="text-gray-600 text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
                         </div>
-                        <div className="border border-gray-600/40 text-gray-600 p-4 rounded-xl hover:bg-[#262626]">
-                            <h2 className="text-muted-foreground text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
+                        <div className="border border-gray-200/50 bg-white/60 backdrop-blur-sm shadow-md text-gray-600 p-4 rounded-xl hover:bg-white/80 hover:shadow-lg transition-all">
+                            <h2 className="text-gray-600 text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
                         </div>
-                        <div className="border border-gray-600/40 text-gray-600 p-4 rounded-xl hover:bg-[#262626]">
-                            <h2 className="text-muted-foreground text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
+                        <div className="border border-gray-200/50 bg-white/60 backdrop-blur-sm shadow-md text-gray-600 p-4 rounded-xl hover:bg-white/80 hover:shadow-lg transition-all">
+                            <h2 className="text-gray-600 text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
                         </div>
-                        <div className="border border-gray-600/40 text-gray-600 p-4 rounded-xl hover:bg-[#262626]">
-                            <h2 className="text-muted-foreground text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
+                        <div className="border border-gray-200/50 bg-white/60 backdrop-blur-sm shadow-md text-gray-600 p-4 rounded-xl hover:bg-white/80 hover:shadow-lg transition-all">
+                            <h2 className="text-gray-600 text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
                         </div>
                     </div>
                 </div>
