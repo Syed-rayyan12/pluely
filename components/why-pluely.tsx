@@ -1,10 +1,30 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { ChevronDown } from "lucide-react"
+import AnimatedHeading from './animated-heading'
 
 export default function WhyPluely() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.2 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
+  }, [])
 
   const features = [
     {
@@ -40,25 +60,39 @@ export default function WhyPluely() {
   ]
 
   return (
-    <section id="why" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="mb-20 flex justify-center flex-col items-center text-center">
-        <h2 className="text-5xl font-bold mb-12">
-          Enterprise-Grade Features
-          <br />
-          <span className="">Built for Privacy</span>
-        </h2>
-        <p className="max-w-2xl text-center text-gray-600">Connect to any AI provider using simple curl commands. OpenAI, Anthropic, Google, xAI, Mistral, Cohere, Perplexity, Groq, Ollama, or your own custom endpoint. Switch providers anytime without losing your chat history or configuration. Full streaming and non-streaming support with complete flexibility.</p>
+    <section ref={sectionRef} id="why" className="py-10 px-4 sm:px-6 lg:px-8 mx-6 my-6 rounded-3xl bg-white/80 backdrop-blur-md border border-gray-200/50 shadow-lg perspective-1000">
+      <div className="mb-10 flex justify-center flex-col items-center text-center">
+        <AnimatedHeading text="Enterprise-Grade Features Built for Privacy" className="text-5xl font-bold mb-4" />
+        <p className="max-w-2xl text-center text-gray-600">Connect to any AI provider using simple curl commands. OpenAI, Anthropic, Google, xAI, Mistral, Cohere, Perplexity, Groq, Ollama, or your own custom endpoint. Switch providers anytime without losing your chat history or configuration.</p>
       </div>
       <div className="max-w-5xl mx-auto">
 
 
-        <div className="grid lg:grid-cols-[2fr_3fr]">
+        <div className="grid lg:grid-cols-[2fr_3fr] gap-6">
           {/* Accordion */}
-          <div className="space-y-4 w-[90%]">
+          <div 
+            className={`space-y-4 w-full transition-all duration-1000 ease-out ${
+              isVisible 
+                ? "opacity-100 translate-x-0 rotate-y-0" 
+                : "opacity-0 -translate-x-20 rotate-y-[-15deg]"
+            }`}
+            style={{ 
+              transformStyle: 'preserve-3d',
+              transform: isVisible ? 'perspective(1000px) rotateY(0deg)' : 'perspective(1000px) rotateY(-15deg)',
+              transitionDelay: '0.2s'
+            }}
+          >
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white/60 backdrop-blur-sm border-b border-gray-200/50 overflow-hidden transition-all duration-300"
+                className={`bg-white/60 backdrop-blur-sm border-b border-gray-200/50 overflow-hidden transition-all duration-700 ease-out ${
+                  isVisible 
+                    ? "opacity-100 translate-y-0" 
+                    : "opacity-0 translate-y-10"
+                }`}
+                style={{ 
+                  transitionDelay: isVisible ? `${0.3 + index * 0.1}s` : '0s'
+                }}
               >
                 <button
                   onClick={() => setActiveIndex(index)}
@@ -81,7 +115,18 @@ export default function WhyPluely() {
           </div>
 
           {/* Video Box */}
-          <div className="relative rounded-xl bg-white/60 backdrop-blur-sm border border-gray-200/50 shadow-xl p-2 w-full h-full">
+          <div 
+            className={`relative rounded-xl bg-gray-100 backdrop-blur-xl border border-gray-200/50 p-2 w-full h-full transition-all duration-1000 ease-out ${
+              isVisible 
+                ? "opacity-100 translate-x-0" 
+                : "opacity-0 translate-x-20"
+            }`}
+            style={{ 
+              transformStyle: 'preserve-3d',
+              transform: isVisible ? 'perspective(1000px) rotateY(0deg)' : 'perspective(1000px) rotateY(15deg)',
+              transitionDelay: '0.4s'
+            }}
+          >
             <div className="relative rounded-xl overflow-hidden border border-gray-200/50 h-full bg-white/40">
               <video
                 key={activeIndex}
@@ -99,7 +144,7 @@ export default function WhyPluely() {
 
 
         </div>
-        <div className="text-center mt-30 w-full">
+        {/* <div className="text-center mt-30 w-full">
           <h2 className="text-gray-900 font-medium text-2xl mb-3">Pre-Configured AI Providers</h2>
           <div className="grid-cols-3 grid-cols-2 grid  items-center  mx-auto  gap-4 w-full mt-4">
             <div className="border border-gray-200/50 bg-white/60 backdrop-blur-sm shadow-md text-gray-600 p-4 rounded-xl hover:bg-white/80 hover:shadow-lg transition-all">
@@ -118,7 +163,7 @@ export default function WhyPluely() {
               <h2 className="text-gray-600 text-left text-sm">Mistral AI: Access Mistral Large, Medium, and Small models with your API key</h2>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

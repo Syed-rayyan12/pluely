@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
+import AnimatedHeading from './animated-heading'
 
 export default function FaqVideos() {
     const [activeIndex, setActiveIndex] = useState(0)
@@ -25,13 +26,9 @@ export default function FaqVideos() {
     ]
 
     return (
-        <section id="why" className="py-20 px-4 sm:px-6 lg:px-8">
+        <section id="why" className="py-20 px-4 sm:px-6 lg:px-8 mx-6 my-6 rounded-3xl bg-white/40 backdrop-blur-md border border-gray-200/50 shadow-lg">
             <div className="mb-20 flex justify-center flex-col items-center text-center">
-                <h2 className="text-5xl font-bold mb-12">
-                    Enterprise-Grade Features
-                    <br />
-                    <span className="">Built for Privacy</span>
-                </h2>
+                <AnimatedHeading text="Enterprise-Grade Features Built for Privacy" className="text-5xl font-bold mb-12" />
                 <p className="max-w-2xl text-center text-gray-600">Connect to any AI provider using simple curl commands. OpenAI, Anthropic, Google, xAI, Mistral, Cohere, Perplexity, Groq, Ollama, or your own custom endpoint. Switch providers anytime without losing your chat history or configuration. Full streaming and non-streaming support with complete flexibility.</p>
             </div>
             <div className="max-w-5xl mx-auto">
@@ -84,7 +81,7 @@ export default function FaqVideos() {
                     </div>
 
                     {/* Video Box */}
-                    <div className="relative rounded-xl bg-white/60 backdrop-blur-sm border border-gray-200/50 shadow-xl p-2 w-full h-full">
+                    <div className="relative rounded-xl bg-red-500 backdrop-blur-sm border border-gray-200/50 shadow-xl p-2 w-full h-full">
                         <div className="relative rounded-xl overflow-hidden border border-gray-200/50 h-full bg-white/40">
                             <video
                                 key={activeIndex}

@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { Button } from './ui/button';
 import { ChevronDown, HelpCircle } from 'lucide-react';
+import AnimatedHeading from './animated-heading';
 
 const faqs = [
     {
@@ -35,26 +36,16 @@ const FaqTwo = () => {
     };
 
     return (
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 mx-6 my-6 ">
             <div className="max-w-5xl mx-auto">
                 {/* Ready to Go Invisible Section */}
-                <div className='text-center mb-20'>
-                    <h2 className='text-5xl font-medium mb-4'>Ready to Go Invisible?</h2>
-                    <p className='max-w-3xl text-md mx-auto leading-8 text-gray-600'>
-                        Experience AI assistance that operates with complete stealth. Built with Tauri and Rust for blazing-fast performance, absolute privacy, and professional-grade discretion. Your invisible AI companion for meetings, interviews, and presentations.
-                    </p>
-
-                    <div className='flex gap-4 justify-center mt-6'>
-                        <Button className='bg-gray-900 text-white py-5 px-8 hover:bg-gray-800 shadow-lg'>Get Started</Button>
-                        <Button className='bg-white/60 backdrop-blur-sm text-gray-900 border border-gray-200/50 rounded-lg py-5 px-8 hover:bg-white/80 shadow-md'>Learn More</Button>
-                    </div>
-                </div>
+              
 
                 {/* FAQ Section */}
                 <div className="grid lg:grid-cols-[1fr_2fr] gap-12 items-start">
                     {/* Left Side - Heading */}
                     <div className="space-y-4">
-                        <h2 className="text-4xl font-bold">Frequently Asked Questions</h2>
+                        <AnimatedHeading text="Frequently Asked Questions" className="text-4xl font-bold" />
                         <p className="text-gray-600">
                             Can't find what you're looking for? Contact support for further assistance.
                         </p>

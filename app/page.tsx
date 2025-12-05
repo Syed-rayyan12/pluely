@@ -22,6 +22,7 @@ import CompleteInvisibilityThree from "@/components/completevisibility-three"
 import CompleteInvisibilityFour from "@/components/complete-visibility-four"
 import FaqVideos from "@/components/faq-videos"
 import FaqTwo from "@/components/faq-two"
+import CallToAction from "@/components/call-to-action"
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(true)
@@ -58,8 +59,9 @@ export default function Home() {
           <CompleteInvisibilityFour />
       <WhyPluely />
       {/* <Invisibility /> */}
-      <FaqVideos />
+      {/* <FaqVideos /> */}
       <FaqTwo />
+      <CallToAction />
       {/* <AlwaysReady />
       <AIControl />
       <VoiceAudio />

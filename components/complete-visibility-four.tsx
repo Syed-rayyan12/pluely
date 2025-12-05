@@ -1,12 +1,14 @@
+"use client"
+
 import React from 'react'
+import AnimatedHeading from './animated-heading'
 
 const CompleteInvisibilityFour = () => {
     return (
         <>
-            <div className='max-w-6xl mx-auto mt-30'>
-                <div className='flex items-start justify-between gap-12 mb-8 data-animate'>
-                    <h2 className='font-bold text-4xl whitespace-nowrap'>Always Ready & Accessible
-                    </h2>
+            <div className='max-w-6xl mx-auto p-8 '>
+                <div className='flex items-center justify-between gap-12 mb-8 data-animate'>
+                    <AnimatedHeading text="Always Ready & Accessible" className='font-bold text-4xl whitespace-nowrap' />
                     <p className='text-gray-600 text-left max-w-xl'>Position your AI assistant anywhere on screen with smooth drag-and-drop. Adjustable transparency, always-on-top mode, and instant keyboard access keep Pluely ready when you need it.
                     </p>
                 </div>
@@ -15,7 +17,7 @@ const CompleteInvisibilityFour = () => {
                     <div
                         className="absolute bottom-0 left-0 w-full h-1/2 rounded-b-2xl"
                         style={{
-                            background: 'linear-gradient(to top, rgba(255,255,255,0.9), rgba(255,255,255,0))',
+                            background: 'linear-gradient(to top, rgba(255,255,255,0.4), rgba(255,255,255,0))',
                         }}
                     />
                     <video
@@ -25,7 +27,7 @@ const CompleteInvisibilityFour = () => {
                         playsInline
                         className="rounded-xl w-full"
                     >
-                        <source src="/video/complete-4.mp4" type="video/mp4" />
+                        <source src="/video/mec.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
